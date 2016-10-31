@@ -2,10 +2,10 @@
 
 import React from 'react';
 
-export default class Header extends React.Component {
+export default class Main extends React.Component {
   render () {
     return(
-      <h2>Header</h2>
+      <h1>Main</h1>
     );
   }
 }
