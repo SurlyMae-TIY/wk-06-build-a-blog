@@ -21972,13 +21972,9 @@
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
-	var _Footer = __webpack_require__(/*! ./Footer */ 175);
+	var _Footer = __webpack_require__(/*! ./Footer */ 177);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
-	
-	var _data = __webpack_require__(/*! ./data */ 176);
-	
-	var _data2 = _interopRequireDefault(_data);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22005,7 +22001,6 @@
 	        { className: 'container' },
 	        _react2.default.createElement(_Header2.default, null),
 	        _react2.default.createElement(_Main2.default, null),
-	        _react2.default.createElement('data', null),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -22135,6 +22130,10 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
+	var _scripts = __webpack_require__(/*! ./scripts */ 175);
+	
+	var _scripts2 = _interopRequireDefault(_scripts);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22166,7 +22165,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          null,
-	          'Blog post content'
+	          'blogInfo'
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -22184,6 +22183,51 @@
 
 /***/ },
 /* 175 */
+/*!***************************************!*\
+  !*** ./src/app/components/scripts.js ***!
+  \***************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	var blogData = __webpack_require__(/*! ./data.json */ 176);
+	
+	function blogInfo(dataSet) {
+	  var result = dataSet.title;
+	  console.log(result);
+	  return result;
+	}
+	
+	blogInfo(blogData[0]);
+
+/***/ },
+/* 176 */
+/*!**************************************!*\
+  !*** ./src/app/components/data.json ***!
+  \**************************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	[{
+	    "title": "Blog Post 1",
+	    "posted": "posted at date/time",
+	    "content": "random ipsum text",
+	    "tags": ["tag1", "tag2", "tag3"]
+	}, {
+	    "title": "Blog Post 2",
+	    "posted": "posted at date/time",
+	    "content": "random ipsum text",
+	    "tags": ["tag1", "tag2", "tag3"]
+	}, {
+	    "title": "Blog Post 3",
+	    "posted": "posted at date/time",
+	    "content": "random ipsum text",
+	    "tags": ["tag1", "tag2", "tag3"]
+	}];
+
+/***/ },
+/* 177 */
 /*!**************************************!*\
   !*** ./src/app/components/Footer.js ***!
   \**************************************/
@@ -22242,32 +22286,6 @@
 	}(_react2.default.Component);
 	
 	exports.default = Footer;
-
-/***/ },
-/* 176 */
-/*!**************************************!*\
-  !*** ./src/app/components/data.json ***!
-  \**************************************/
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	[{
-	    "title": "Blog Post 1",
-	    "posted": "posted at date/time",
-	    "content": "random ipsum text",
-	    "tags": ["tag1", "tag2", "tag3"]
-	}, {
-	    "title": "Blog Post 2",
-	    "posted": "posted at date/time",
-	    "content": "random ipsum text",
-	    "tags": ["tag1", "tag2", "tag3"]
-	}, {
-	    "title": "Blog Post 3",
-	    "posted": "posted at date/time",
-	    "content": "random ipsum text",
-	    "tags": ["tag1", "tag2", "tag3"]
-	}];
 
 /***/ }
 /******/ ]);
