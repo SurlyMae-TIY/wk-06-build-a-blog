@@ -4,6 +4,7 @@ import React from 'react';
 import Header from './Header';
 import Main from './Main';
 import Footer from './Footer';
+import blogInfo from './data';
 
 export default class App extends React.Component {
   render () {
@@ -11,6 +12,7 @@ export default class App extends React.Component {
       <div className='container'>
         <Header />
         <Main />
+        <data />
         <Footer />
       </div>
     );
