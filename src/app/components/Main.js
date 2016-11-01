@@ -1,7 +1,7 @@
 'use strict';
 
 import React from 'react';
-import blogInfo from './scripts';
+import data from './scripts';
 
 export default class Main extends React.Component {
   render () {

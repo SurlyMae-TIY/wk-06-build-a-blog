@@ -1,9 +1,9 @@
-var blogData = require('./data.json');
-
-function blogInfo (dataSet) {
-  let result = dataSet[0].title;
-  console.log(result);
-  return result;
-}
-
-blogData.forEach(blogInfo);
+fetch('./app/data.json')
+// make the request for the json file
+.then(function(response) {
+    // Convert to JSON
+    return response.json();
+}).then(function(obj) {
+    // Yay, `j` is a JavaScript object
+    console.log(obj);
+});
