@@ -5,7 +5,11 @@ import React from 'react';
 export default class Main extends React.Component {
   render () {
     return(
-      <h1>Main</h1>
+      <div>
+        <h1>Blog Posts</h1>
+        <div>Blog post content</div>
+        <div>Sidebar area</div>
+      </div>
     );
   }
 }
