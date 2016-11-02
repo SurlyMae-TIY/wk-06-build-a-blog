@@ -1,4 +1,4 @@
-var debug = process.env.NODE_ENV !== "production";
+// var debug = process.env.NODE_ENV !== "production";
 var path = require("path");
 var webpack = require('webpack');
 
@@ -23,16 +23,8 @@ var config = {
         }
       },
       {
-        test: /\.json?/,
+        test: /\.json$/,
         loader: "json-loader"
-      },
-      {
-        test: /\.css$/,
-        loader: "style!css"
-      },
-      {
-        test: /\.sass$/,
-        loaders: ["style", "css", "sass"]
       }
     ]
   }
