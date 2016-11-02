@@ -5,5 +5,5 @@ fetch('./app/data.json')
     return response.json();
 }).then(function(obj) {
     // Yay, `j` is a JavaScript object
-    console.log(obj);
+    // console.log(obj);
 });

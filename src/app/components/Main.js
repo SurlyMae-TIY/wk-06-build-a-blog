@@ -1,7 +1,9 @@
 'use strict';
 
 import React from 'react';
-import data from './scripts';
+import myData from '../data.json';
+//
+console.log(myData);
 
 export default class Main extends React.Component {
   render () {
