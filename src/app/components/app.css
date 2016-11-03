@@ -1,0 +1,25 @@
+.header li {
+  list-style: none;
+  display: inline;
+  padding: 30px;
+  margin: 20px;
+}
+
+.header, .footer {
+  display: flex;
+  justify-content: center;
+}
+
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.blogstuff {
+  width: 60%;
+}
+
+.sidebar {
+  width: 20%;
+}
