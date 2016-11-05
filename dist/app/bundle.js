@@ -21968,17 +21968,21 @@
 	
 	var _Header2 = _interopRequireDefault(_Header);
 	
-	var _Main = __webpack_require__(/*! ./Main */ 174);
+	var _Main = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"./Main\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 	
 	var _Main2 = _interopRequireDefault(_Main);
 	
-	var _Footer = __webpack_require__(/*! ./Footer */ 177);
+	var _Footer = __webpack_require__(/*! ./Footer */ 174);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _app = __webpack_require__(/*! ./app.css */ 178);
+	var _app = __webpack_require__(/*! ./app.css */ 175);
 	
 	var _app2 = _interopRequireDefault(_app);
+	
+	var _data = __webpack_require__(/*! ../data.json */ 179);
+	
+	var _data2 = _interopRequireDefault(_data);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -21988,13 +21992,20 @@
 	
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
+	console.log(_data2.default);
+	
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
 	  function App() {
 	    _classCallCheck(this, App);
 	
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+	
+	    _this.state = {
+	      data: _data2.default
+	    };
+	    return _this;
 	  }
 	
 	  _createClass(App, [{
@@ -22004,7 +22015,7 @@
 	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
-	        _react2.default.createElement(_Main2.default, null),
+	        _react2.default.createElement(_Main2.default, { data: this.state.data }),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -22056,7 +22067,7 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
+	        'header',
 	        { className: 'header' },
 	        _react2.default.createElement(
 	          'ul',
@@ -22109,279 +22120,6 @@
 
 /***/ },
 /* 174 */
-/*!************************************!*\
-  !*** ./src/app/components/Main.js ***!
-  \************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	var _data = __webpack_require__(/*! ../data.json */ 175);
-	
-	var _data2 = _interopRequireDefault(_data);
-	
-	var _Sidebar = __webpack_require__(/*! ./Sidebar */ 176);
-	
-	var _Sidebar2 = _interopRequireDefault(_Sidebar);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	console.log(_data2.default);
-	
-	var Main = function (_React$Component) {
-	  _inherits(Main, _React$Component);
-	
-	  function Main() {
-	    _classCallCheck(this, Main);
-	
-	    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
-	  }
-	
-	  _createClass(Main, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'body' },
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'blogstuff' },
-	          _react2.default.createElement(
-	            'h2',
-	            null,
-	            'Main'
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            _data2.default[0].title
-	          ),
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            _data2.default[0].posted
-	          ),
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            'tags: ',
-	            _data2.default[0].tags[0],
-	            ', ',
-	            _data2.default[0].tags[1],
-	            ', ',
-	            _data2.default[0].tags[2]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[0].contentA
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[0].contentB
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[0].contentC
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            _data2.default[1].title
-	          ),
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            _data2.default[1].posted
-	          ),
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            'tags: ',
-	            _data2.default[1].tags[0],
-	            ', ',
-	            _data2.default[1].tags[1],
-	            ', ',
-	            _data2.default[1].tags[2]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[1].contentA
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[1].contentB
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[1].contentC
-	          ),
-	          _react2.default.createElement(
-	            'h3',
-	            null,
-	            _data2.default[2].title
-	          ),
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            _data2.default[2].posted
-	          ),
-	          _react2.default.createElement(
-	            'h4',
-	            null,
-	            'tags: ',
-	            _data2.default[2].tags[0],
-	            ', ',
-	            _data2.default[2].tags[1],
-	            ', ',
-	            _data2.default[2].tags[2]
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[2].contentA
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[2].contentB
-	          ),
-	          _react2.default.createElement(
-	            'p',
-	            null,
-	            _data2.default[2].contentC
-	          )
-	        ),
-	        _react2.default.createElement(
-	          'div',
-	          { className: 'sidebar' },
-	          _react2.default.createElement(_Sidebar2.default, null)
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Main;
-	}(_react2.default.Component);
-	
-	exports.default = Main;
-
-/***/ },
-/* 175 */
-/*!***************************!*\
-  !*** ./src/app/data.json ***!
-  \***************************/
-/***/ function(module, exports) {
-
-	"use strict";
-	
-	module.exports = [{
-		"title": "Blog Post 1",
-		"posted": "posted at date/time",
-		"contentA": "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.",
-		"contentB": "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.",
-		"contentC": "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie.",
-		"tags": ["toast", "pour-over", "distillery"]
-	}, {
-		"title": "Blog Post 2",
-		"posted": "posted at date/time",
-		"contentA": "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.",
-		"contentB": "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.",
-		"contentC": "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie.",
-		"tags": ["chicharrones", "vape", "PBR"]
-	}, {
-		"title": "Blog Post 3",
-		"posted": "posted at date/time",
-		"contentA": "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.",
-		"contentB": "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.",
-		"contentC": "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie.",
-		"tags": ["meditation", "artisan", "cred"]
-	}];
-
-/***/ },
-/* 176 */
-/*!***************************************!*\
-  !*** ./src/app/components/Sidebar.js ***!
-  \***************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Sidebar = function (_React$Component) {
-	  _inherits(Sidebar, _React$Component);
-	
-	  function Sidebar() {
-	    _classCallCheck(this, Sidebar);
-	
-	    return _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).apply(this, arguments));
-	  }
-	
-	  _createClass(Sidebar, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Sidebar'
-	        ),
-	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          'sidebar things'
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Sidebar;
-	}(_react2.default.Component);
-	
-	exports.default = Sidebar;
-
-/***/ },
-/* 177 */
 /*!**************************************!*\
   !*** ./src/app/components/Footer.js ***!
   \**************************************/
@@ -22420,7 +22158,7 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'div',
+	        'footer',
 	        { className: 'footer' },
 	        _react2.default.createElement(
 	          'h2',
@@ -22437,7 +22175,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 178 */
+/* 175 */
 /*!************************************!*\
   !*** ./src/app/components/app.css ***!
   \************************************/
@@ -22446,10 +22184,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../../~/css-loader!./app.css */ 179);
+	var content = __webpack_require__(/*! !./../../../~/css-loader!./app.css */ 176);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../../../~/style-loader/addStyles.js */ 181)(content, {});
+	var update = __webpack_require__(/*! ./../../../~/style-loader/addStyles.js */ 178)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -22466,24 +22204,24 @@
 	}
 
 /***/ },
-/* 179 */
+/* 176 */
 /*!***************************************************!*\
   !*** ./~/css-loader!./src/app/components/app.css ***!
   \***************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 180)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 177)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".header li {\n  list-style: none;\n  display: inline;\n  padding: 30px;\n  margin: 20px;\n}\n\n.header, .footer {\n  display: flex;\n  justify-content: center;\n}\n\n.body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n.blogstuff {\n  width: 60%;\n}\n\n.sidebar {\n  width: 20%;\n}\n", ""]);
+	exports.push([module.id, ".header li {\n  list-style: none;\n  display: inline;\n  padding: 30px;\n  margin: 20px;\n}\n\n.header, .footer {\n  display: flex;\n  justify-content: center;\n}\n\n.body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n.main {\n  width: 60%;\n}\n\n.sidebar {\n  width: 20%;\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 180 */
+/* 177 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -22542,7 +22280,7 @@
 
 
 /***/ },
-/* 181 */
+/* 178 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -22795,6 +22533,38 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 179 */
+/*!***************************!*\
+  !*** ./src/app/data.json ***!
+  \***************************/
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	module.exports = [{
+		"title": "Blog Post 1",
+		"posted": "posted at date/time",
+		"contentA": "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.",
+		"contentB": "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.",
+		"contentC": "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie.",
+		"tags": ["toast", "pour-over", "distillery"]
+	}, {
+		"title": "Blog Post 2",
+		"posted": "posted at date/time",
+		"contentA": "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.",
+		"contentB": "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.",
+		"contentC": "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie.",
+		"tags": ["chicharrones", "vape", "PBR"]
+	}, {
+		"title": "Blog Post 3",
+		"posted": "posted at date/time",
+		"contentA": "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.",
+		"contentB": "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.",
+		"contentC": "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie.",
+		"tags": ["meditation", "artisan", "cred"]
+	}];
 
 /***/ }
 /******/ ]);
