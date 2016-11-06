@@ -21972,15 +21972,15 @@
 	
 	var _Body2 = _interopRequireDefault(_Body);
 	
-	var _Footer = __webpack_require__(/*! ./Footer */ 177);
+	var _Footer = __webpack_require__(/*! ./Footer */ 178);
 	
 	var _Footer2 = _interopRequireDefault(_Footer);
 	
-	var _app = __webpack_require__(/*! ./app.css */ 178);
+	var _app = __webpack_require__(/*! ./app.css */ 179);
 	
 	var _app2 = _interopRequireDefault(_app);
 	
-	var _data = __webpack_require__(/*! ../data.json */ 182);
+	var _data = __webpack_require__(/*! ../data.json */ 183);
 	
 	var _data2 = _interopRequireDefault(_data);
 	
@@ -21997,30 +21997,25 @@
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 	
-	  function App() {
+	  function App(props) {
 	    _classCallCheck(this, App);
 	
-	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
+	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 	
 	    _this.state = {
-	      data: "Welcome to your source for all things hipster! Just click a hipstery search word on the right and we'll return a match so you can satisfy your hipster heart. You can also click on a month!"
+	      data: _data2.default
 	    };
 	    return _this;
 	  }
 	
 	  _createClass(App, [{
-	    key: 'changeData',
-	    value: function changeData(data) {
-	      this.setState({ data: data });
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
-	        _react2.default.createElement(_Body2.default, { changeData: this.changeData.bind(this), data: this.state.data }),
+	        _react2.default.createElement(_Body2.default, { data: this.state.data }),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -22142,13 +22137,13 @@
 	
 	var _react2 = _interopRequireDefault(_react);
 	
-	var _Sidebar = __webpack_require__(/*! ./Body/Sidebar */ 175);
-	
-	var _Sidebar2 = _interopRequireDefault(_Sidebar);
-	
-	var _Main = __webpack_require__(/*! ./Body/Main */ 176);
+	var _Main = __webpack_require__(/*! ./Body/Main */ 175);
 	
 	var _Main2 = _interopRequireDefault(_Main);
+	
+	var _Sidebar = __webpack_require__(/*! ./Body/Sidebar */ 177);
+	
+	var _Sidebar2 = _interopRequireDefault(_Sidebar);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -22181,7 +22176,7 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'sidebar' },
-	          _react2.default.createElement(_Sidebar2.default, null)
+	          _react2.default.createElement(_Sidebar2.default, { data: this.props.data })
 	        )
 	      );
 	    }
@@ -22194,6 +22189,149 @@
 
 /***/ },
 /* 175 */
+/*!*****************************************!*\
+  !*** ./src/app/components/Body/Main.js ***!
+  \*****************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	var _PostContent = __webpack_require__(/*! ./Main/PostContent */ 176);
+	
+	var _PostContent2 = _interopRequireDefault(_PostContent);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Main = function (_React$Component) {
+	  _inherits(Main, _React$Component);
+	
+	  function Main() {
+	    _classCallCheck(this, Main);
+	
+	    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
+	  }
+	
+	  _createClass(Main, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'main' },
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            this.props.data[2].title
+	          ),
+	          _react2.default.createElement(_PostContent2.default, { data: this.props.data[2].content })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            this.props.data[1].title
+	          ),
+	          _react2.default.createElement(_PostContent2.default, { data: this.props.data[1].content })
+	        ),
+	        _react2.default.createElement(
+	          'div',
+	          null,
+	          _react2.default.createElement(
+	            'h2',
+	            null,
+	            this.props.data[0].title
+	          ),
+	          _react2.default.createElement(_PostContent2.default, { data: this.props.data[0].content })
+	        )
+	      );
+	    }
+	  }]);
+	
+	  return Main;
+	}(_react2.default.Component);
+	
+	exports.default = Main;
+
+/***/ },
+/* 176 */
+/*!*****************************************************!*\
+  !*** ./src/app/components/Body/Main/PostContent.js ***!
+  \*****************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _react = __webpack_require__(/*! react */ 1);
+	
+	var _react2 = _interopRequireDefault(_react);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	
+	var Post = function (_React$Component) {
+	  _inherits(Post, _React$Component);
+	
+	  function Post() {
+	    _classCallCheck(this, Post);
+	
+	    return _possibleConstructorReturn(this, (Post.__proto__ || Object.getPrototypeOf(Post)).apply(this, arguments));
+	  }
+	
+	  _createClass(Post, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        null,
+	        this.props.data.map(function (paragraph, index) {
+	          return _react2.default.createElement(
+	            'p',
+	            { key: index },
+	            paragraph
+	          );
+	        })
+	      );
+	    }
+	  }]);
+	
+	  return Post;
+	}(_react2.default.Component);
+	
+	exports.default = Post;
+
+/***/ },
+/* 177 */
 /*!********************************************!*\
   !*** ./src/app/components/Body/Sidebar.js ***!
   \********************************************/
@@ -22229,80 +22367,45 @@
 	  }
 	
 	  _createClass(Sidebar, [{
-	    key: 'handleChange',
-	    value: function handleChange(e) {
-	      this.props.changeData();
-	    }
-	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'clickers' },
 	        _react2.default.createElement(
-	          'h3',
+	          'button',
 	          null,
-	          this.props.data
+	          this.props.data[0].posted
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          { onChange: this.handleChange.bind(this) },
-	          'September'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onChange: this.handleChange.bind(this) },
+	          null,
 	          'October'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          { onChange: this.handleChange.bind(this) },
-	          'November'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onChange: this.handleChange.bind(this) },
+	          null,
 	          '"toast"'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          { onChange: this.handleChange.bind(this) },
-	          '"pour-over"'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onChange: this.handleChange.bind(this) },
+	          null,
 	          '"distillery"'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          { onChange: this.handleChange.bind(this) },
-	          '"chicharrones"'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onChange: this.handleChange.bind(this) },
+	          null,
 	          '"vape"'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          { onChange: this.handleChange.bind(this) },
-	          '"PBR"'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onChange: this.handleChange.bind(this) },
+	          null,
 	          '"meditation"'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          { onChange: this.handleChange.bind(this) },
+	          null,
 	          '"artisan"'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          { onChange: this.handleChange.bind(this) },
-	          '"cred"'
 	        )
 	      );
 	    }
@@ -22314,63 +22417,7 @@
 	exports.default = Sidebar;
 
 /***/ },
-/* 176 */
-/*!*****************************************!*\
-  !*** ./src/app/components/Body/Main.js ***!
-  \*****************************************/
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-	
-	var _react = __webpack_require__(/*! react */ 1);
-	
-	var _react2 = _interopRequireDefault(_react);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	
-	var Main = function (_React$Component) {
-	  _inherits(Main, _React$Component);
-	
-	  function Main() {
-	    _classCallCheck(this, Main);
-	
-	    return _possibleConstructorReturn(this, (Main.__proto__ || Object.getPrototypeOf(Main)).apply(this, arguments));
-	  }
-	
-	  _createClass(Main, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          this.props.data
-	        )
-	      );
-	    }
-	  }]);
-	
-	  return Main;
-	}(_react2.default.Component);
-	
-	exports.default = Main;
-
-/***/ },
-/* 177 */
+/* 178 */
 /*!**************************************!*\
   !*** ./src/app/components/Footer.js ***!
   \**************************************/
@@ -22426,7 +22473,7 @@
 	exports.default = Footer;
 
 /***/ },
-/* 178 */
+/* 179 */
 /*!************************************!*\
   !*** ./src/app/components/app.css ***!
   \************************************/
@@ -22435,10 +22482,10 @@
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(/*! !./../../../~/css-loader!./app.css */ 179);
+	var content = __webpack_require__(/*! !./../../../~/css-loader!./app.css */ 180);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(/*! ./../../../~/style-loader/addStyles.js */ 181)(content, {});
+	var update = __webpack_require__(/*! ./../../../~/style-loader/addStyles.js */ 182)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -22455,24 +22502,24 @@
 	}
 
 /***/ },
-/* 179 */
+/* 180 */
 /*!***************************************************!*\
   !*** ./~/css-loader!./src/app/components/app.css ***!
   \***************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 180)();
+	exports = module.exports = __webpack_require__(/*! ./../../../~/css-loader/lib/css-base.js */ 181)();
 	// imports
 	
 	
 	// module
-	exports.push([module.id, ".header li {\n  list-style: none;\n  display: inline;\n  padding: 30px;\n  margin: 20px;\n}\n\n.header, .footer {\n  display: flex;\n  justify-content: center;\n}\n\n.body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n}\n\n.main {\n  width: 60%;\n}\n\n.sidebar {\n  width: 20%;\n}\n", ""]);
+	exports.push([module.id, ".header li {\n  list-style: none;\n  display: inline;\n  padding: 2em;\n  margin: 2em;\n}\n\n.header {\n  display: flex;\n  justify-content: center;\n  padding-top: 2em;\n}\n\n.footer {\n  display: flex;\n  justify-content: center;\n  padding-bottom: 3em;\n}\n\n.body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  padding: 2em;\n}\n\n.main {\n  width: 80%;\n}\n\n.sidebar {\n  width: 15%;\n  padding-top: 4em;\n}\n\n.clickers {\n  display: flex;\n  flex-direction: column;\n}\n\nbutton {\n  margin: .15em;\n}\n", ""]);
 	
 	// exports
 
 
 /***/ },
-/* 180 */
+/* 181 */
 /*!**************************************!*\
   !*** ./~/css-loader/lib/css-base.js ***!
   \**************************************/
@@ -22531,7 +22578,7 @@
 
 
 /***/ },
-/* 181 */
+/* 182 */
 /*!*************************************!*\
   !*** ./~/style-loader/addStyles.js ***!
   \*************************************/
@@ -22786,7 +22833,7 @@
 
 
 /***/ },
-/* 182 */
+/* 183 */
 /*!***************************!*\
   !*** ./src/app/data.json ***!
   \***************************/
@@ -22795,20 +22842,20 @@
 	"use strict";
 	
 	module.exports = [{
-		"title": "Blog Post 1",
+		"title": "Mr. Blue Hipster",
 		"posted": "September",
-		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke. Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
-		"tags": ["toast, ", "pour-over, ", "distillery"]
+		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.", "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher.", "Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
+		"tags": ["toast, ", "vape, ", "distillery"]
 	}, {
-		"title": "Blog Post 2",
-		"posted": "October",
-		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
-		"tags": ["chicharrones, ", "vape, ", "PBR"]
+		"title": "Hipster Bring Me Down",
+		"posted": "September",
+		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant.", "Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.", "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
+		"tags": ["meditation, ", "vape, ", "PBR"]
 	}, {
-		"title": "Blog Post 3",
-		"posted": "November",
-		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke. Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
-		"tags": ["meditation, ", "artisan, ", "cred"]
+		"title": "Evil Hipster",
+		"posted": "September",
+		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke. Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery.", "Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
+		"tags": ["meditation, ", "artisan, ", "vape"]
 	}];
 
 /***/ }
