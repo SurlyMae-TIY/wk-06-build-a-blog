@@ -1,9 +1,9 @@
 'use strict';
 
 import React from 'react';
-import Sidebar from './Body/Sidebar';
-import Main from './Body/Main';
 
+import Main from './Body/Main';
+import Sidebar from './Body/Sidebar';
 
 
 export default class Body extends React.Component {
@@ -14,7 +14,7 @@ export default class Body extends React.Component {
           <Main data={this.props.data}/>
         </div>
         <div className="sidebar">
-          <Sidebar />
+          <Sidebar data={this.props.data}/>
         </div>
       </div>
     );
