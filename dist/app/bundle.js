@@ -22003,19 +22003,24 @@
 	    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this));
 	
 	    _this.state = {
-	      data: _data2.default
+	      data: "Welcome to your source for all things hipster! Just click a hipstery search word on the right and we'll return a match so you can satisfy your hipster heart. You can also click on a month!"
 	    };
 	    return _this;
 	  }
 	
 	  _createClass(App, [{
+	    key: 'changeData',
+	    value: function changeData(data) {
+	      this.setState({ data: data });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
 	        null,
 	        _react2.default.createElement(_Header2.default, null),
-	        _react2.default.createElement(_Body2.default, { data: this.state.data }),
+	        _react2.default.createElement(_Body2.default, { changeData: this.changeData.bind(this), data: this.state.data }),
 	        _react2.default.createElement(_Footer2.default, null)
 	      );
 	    }
@@ -22224,20 +22229,80 @@
 	  }
 	
 	  _createClass(Sidebar, [{
+	    key: 'handleChange',
+	    value: function handleChange(e) {
+	      this.props.changeData();
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
 	        'div',
-	        null,
-	        _react2.default.createElement(
-	          'h2',
-	          null,
-	          'Sidebar'
-	        ),
+	        { className: 'clickers' },
 	        _react2.default.createElement(
 	          'h3',
 	          null,
-	          'sidebar things'
+	          this.props.data
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          'September'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          'October'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          'November'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"toast"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"pour-over"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"distillery"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"chicharrones"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"vape"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"PBR"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"meditation"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"artisan"'
+	        ),
+	        _react2.default.createElement(
+	          'button',
+	          { onChange: this.handleChange.bind(this) },
+	          '"cred"'
 	        )
 	      );
 	    }
@@ -22293,22 +22358,7 @@
 	        _react2.default.createElement(
 	          'h2',
 	          null,
-	          this.props.data[1].title
-	        ),
-	        _react2.default.createElement(
-	          'p',
-	          null,
-	          this.props.data[1].content
-	        ),
-	        _react2.default.createElement(
-	          'h4',
-	          null,
-	          this.props.data[1].posted
-	        ),
-	        _react2.default.createElement(
-	          'h4',
-	          null,
-	          this.props.data[1].tags
+	          this.props.data
 	        )
 	      );
 	    }
@@ -22746,17 +22796,17 @@
 	
 	module.exports = [{
 		"title": "Blog Post 1",
-		"posted": "posted at date/time",
+		"posted": "September",
 		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke. Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
 		"tags": ["toast, ", "pour-over, ", "distillery"]
 	}, {
 		"title": "Blog Post 2",
-		"posted": "posted at date/time",
+		"posted": "October",
 		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
 		"tags": ["chicharrones, ", "vape, ", "PBR"]
 	}, {
 		"title": "Blog Post 3",
-		"posted": "posted at date/time",
+		"posted": "November",
 		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke. Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
 		"tags": ["meditation, ", "artisan, ", "cred"]
 	}];
