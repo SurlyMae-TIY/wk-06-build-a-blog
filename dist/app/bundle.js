@@ -22363,49 +22363,132 @@
 	  function Sidebar() {
 	    _classCallCheck(this, Sidebar);
 	
-	    return _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (Sidebar.__proto__ || Object.getPrototypeOf(Sidebar)).call(this));
+	
+	    _this.state = { label: "Search:", data: "", data2: "" };
+	    return _this;
 	  }
 	
 	  _createClass(Sidebar, [{
+	    key: 'getSeptember',
+	    value: function getSeptember() {
+	      this.setState({
+	        label: "Results: ",
+	        data: this.props.data[0].title,
+	        data2: this.props.data[1].title
+	      });
+	    }
+	  }, {
+	    key: 'getOctober',
+	    value: function getOctober() {
+	      this.setState({
+	        label: "Results: ",
+	        data: this.props.data[2].title,
+	        data2: ""
+	      });
+	    }
+	  }, {
+	    key: 'getToast',
+	    value: function getToast() {
+	      this.setState({
+	        label: "Results: ",
+	        data: this.props.data[2].title,
+	        data2: this.props.data[0].title
+	      });
+	    }
+	  }, {
+	    key: 'getDistillery',
+	    value: function getDistillery() {
+	      this.setState({
+	        label: "Results: ",
+	        data: this.props.data[0].title,
+	        data2: ""
+	      });
+	    }
+	  }, {
+	    key: 'getVape',
+	    value: function getVape() {
+	      this.setState({
+	        label: "Results: ",
+	        data: this.props.data[1].title,
+	        data2: this.props.data[0].title
+	      });
+	    }
+	  }, {
+	    key: 'getOtherOct',
+	    value: function getOtherOct(x) {
+	      if (x.posted === "October") {
+	        this.setState({
+	          label: "Results: ",
+	          data: x.title,
+	          data2: ""
+	        });
+	      }
+	    }
+	  }, {
+	    key: 'getMonth',
+	    value: function getMonth(value) {
+	      if (value === "Oct") {
+	        [this.props.data].filter(getOtherOct);
+	      }
+	    }
+	  }, {
+	    key: 'getPost',
+	    value: function getPost(value) {
+	      this.setState({
+	        label: "Results: ",
+	        data: value,
+	        data2: ""
+	      });
+	    }
+	  }, {
 	    key: 'render',
 	    value: function render() {
+	      var _this2 = this;
+	
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'clickers' },
+	        this.state.label,
+	        _react2.default.createElement('br', null),
+	        this.state.data,
+	        _react2.default.createElement('br', null),
+	        this.state.data2,
+	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(
 	          'button',
-	          null,
-	          this.props.data[0].posted
+	          { onClick: function onClick() {
+	              return _this2.getSeptember();
+	            } },
+	          'September'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          null,
+	          { onClick: function onClick() {
+	              return _this2.getMonth("Oct");
+	            } },
 	          'October'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          null,
+	          { onClick: function onClick() {
+	              return _this2.getToast();
+	            } },
 	          '"toast"'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          null,
+	          { onClick: function onClick() {
+	              return _this2.getDistillery();
+	            } },
 	          '"distillery"'
 	        ),
 	        _react2.default.createElement(
 	          'button',
-	          null,
+	          { onClick: function onClick() {
+	              return _this2.getPost("vape");
+	            } },
 	          '"vape"'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          null,
-	          '"meditation"'
-	        ),
-	        _react2.default.createElement(
-	          'button',
-	          null,
-	          '"artisan"'
 	        )
 	      );
 	    }
@@ -22513,7 +22596,7 @@
 	
 	
 	// module
-	exports.push([module.id, ".header li {\n  list-style: none;\n  display: inline;\n  padding: 2em;\n  margin: 2em;\n}\n\n.header {\n  display: flex;\n  justify-content: center;\n  padding-top: 2em;\n}\n\n.footer {\n  display: flex;\n  justify-content: center;\n  padding-bottom: 3em;\n}\n\n.body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  padding: 2em;\n}\n\n.main {\n  width: 80%;\n}\n\n.sidebar {\n  width: 15%;\n  padding-top: 4em;\n}\n\n.clickers {\n  display: flex;\n  flex-direction: column;\n}\n\nbutton {\n  margin: .15em;\n}\n", ""]);
+	exports.push([module.id, ".header li {\n  list-style: none;\n  display: inline;\n  padding: 2em;\n  margin: 2em;\n}\n\n.header {\n  display: flex;\n  justify-content: center;\n  padding-top: 2em;\n}\n\n.footer {\n  display: flex;\n  justify-content: center;\n  padding-bottom: 3em;\n}\n\n.body {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  padding: 2em;\n}\n\n.main {\n  width: 80%;\n}\n\n.sidebar {\n  width: 15%;\n  padding-top: 4em;\n}\n\n.clickers {\n  display: flex;\n  flex-direction: column;\n}\n\nbutton {\n  position:relative;\n  margin: 1em;\n}\n", ""]);
 	
 	// exports
 
@@ -22853,9 +22936,9 @@
 		"tags": ["meditation, ", "vape, ", "PBR"]
 	}, {
 		"title": "Evil Hipster",
-		"posted": "September",
+		"posted": "October",
 		"content": ["Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke. Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery.", "Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."],
-		"tags": ["meditation, ", "artisan, ", "vape"]
+		"tags": ["meditation, ", "artisan, ", "toast"]
 	}];
 
 /***/ }

@@ -6,8 +6,6 @@ import Body from './Body';
 import Footer from './Footer';
 import Styling from './app.css';
 import myData from '../data.json';
-console.log(myData);
-
 
 export default class App extends React.Component {
   constructor(props) {
