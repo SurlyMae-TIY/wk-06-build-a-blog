@@ -4,9 +4,9 @@ import React from 'react';
 
 export default class Footer extends React.Component {
   render () {
-    return(
+    return (
       <footer className="footer">
-        <h3>Footer things</h3>
+        <h3>Slideshow type of thing with lovely Utah pics?</h3>
       </footer>
     );
   }
