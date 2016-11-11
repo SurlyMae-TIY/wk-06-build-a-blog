@@ -63,7 +63,7 @@
 /******/ 	}
 /******/
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2e783e697014240e2734"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8928cc95cd618008c5c2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/
@@ -22571,7 +22571,7 @@
 	          { className: 'container' },
 	          _react2.default.createElement(_Header2.default, null),
 	          _react2.default.createElement(_reactRouter.Match, { exactly: true, pattern: '/', component: _Main2.default }),
-	          _react2.default.createElement(_reactRouter.Match, { pattern: '/resume', component: CV }),
+	          _react2.default.createElement(_reactRouter.Match, { pattern: '/resume', component: _Resume2.default }),
 	          _react2.default.createElement(_reactRouter.Match, { pattern: '/portfolio', component: _Portfolio2.default }),
 	          _react2.default.createElement(_reactRouter.Match, { pattern: '/contact', component: _Contact2.default }),
 	          _react2.default.createElement(_reactRouter.Miss, { component: _NotFound2.default }),
@@ -26642,7 +26642,11 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'banner' },
-	          _react2.default.createElement('img', { src: './app/images/stock-city.jpg', alt: '' })
+	          _react2.default.createElement('img', { src: './app/images/GallivanR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/MoabR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/JazzArenaR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/SourdoughR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/WalkerCenterR.jpg', alt: '' })
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -26664,7 +26668,7 @@
 	              null,
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: 'resume' },
+	                { to: '/resume' },
 	                'CV'
 	              )
 	            ),
@@ -26673,7 +26677,7 @@
 	              null,
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: 'portfolio' },
+	                { to: '/portfolio' },
 	                'Portfolio'
 	              )
 	            ),
@@ -26682,7 +26686,7 @@
 	              null,
 	              _react2.default.createElement(
 	                _reactRouter.Link,
-	                { to: 'contact' },
+	                { to: '/contact' },
 	                'Contact'
 	              )
 	            )
@@ -26869,6 +26873,7 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'body' },
+	        _react2.default.createElement('hr', null),
 	        this.props.data.map(function (entry, idx) {
 	          return _react2.default.createElement(
 	            'div',
@@ -27153,9 +27158,13 @@
 	        'footer',
 	        { className: 'footer' },
 	        _react2.default.createElement(
-	          'h3',
-	          null,
-	          'Slideshow type of thing with lovely Utah pics?'
+	          'div',
+	          { className: 'banner' },
+	          _react2.default.createElement('img', { src: './app/images/SunsetR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/ValleyR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/SunriseR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/MainR.jpg', alt: '' }),
+	          _react2.default.createElement('img', { src: './app/images/UofUR.jpg', alt: '' })
 	        )
 	      );
 	    }
@@ -27411,7 +27420,7 @@
 	
 	
 	// module
-	exports.push([module.id, "*{\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  min-height: 100vh;\n  flex-direction: column;\n  font-family: sans-serif;\n  font-size: 1.5vw;\n}\n\nheader {\n  display: flex;\n  width: 100%;\n  height: 10%;\n  flex-wrap: nowrap;\n  justify-content: space-between;\n  align-items: center;\n}\n\n\nfooter {\n    display: flex;\n    flex-wrap: nowrap;\n    justify-content: space-between;\n    align-items: center;\n}\n\n.nav {\n  display: flex;\n  justify-content: center;\n  padding-top: 2em;\n}\n\n.nav li {\n  list-style: none;\n  display: inline;\n  padding: 2em;\n  margin: 2em;\n}\n\n.main {\n  display: flex;\n  flex: 1;\n  flex-direction: row;\n  justify-content: space-around;\n  padding: 2em;\n}\n\n\n.footer {\n  display: flex;\n  justify-content: center;\n  padding-bottom: 3em;\n}\n\n\n.body {\n  width: 80%;\n}\n\n.sidebar {\n  width: 15%;\n  padding-top: 4em;\n}\n\n.search {\n  display: flex;\n  flex-direction: column;\n}\n\nbutton {\n  position:relative;\n  margin: 1em;\n}\n", ""]);
+	exports.push([module.id, "*{\n  -webkit-box-sizing: border-box;\n  -moz-box-sizing: border-box;\n  box-sizing: border-box;\n  padding: 0;\n  margin: 0;\n}\n\nbody {\n  display: flex;\n  flex: 1;\n  min-height: 100vh;\n  flex-direction: row;\n  font-family: 'Prociono', serif;\n  font-size: 1.5vw;\n  line-height: 2;\n}\n\nheader {\n  display: flex;\n  width: 100%;\n  flex-wrap: wrap;\n  align-items: center;\n}\n\nimg {\n  width: 20%;\n  border-bottom: 2px solid gray;\n}\n\nfooter {\n  display: flex;\n  width: 100%;\n  flex-wrap: wrap;\n  align-items: center;\n}\n\na {\n  outline: none;\n  text-decoration: none;\n}\n\n.nav {\n  display: flex;\n  justify-content: space-around;\n  padding-bottom: 2em;\n  font-size: 1em;\n}\n\n.nav li {\n  list-style: none;\n  display: inline;\n  padding: 5em;\n  margin: 2em;\n  font-weight: bold;\n}\n\n.main {\n  display: flex;\n  flex: 1;\n  flex-direction: row;\n  justify-content: space-around;\n  padding: 2em;\n}\n\n\n.footer {\n  display: flex;\n  justify-content: center;\n  padding-bottom: 3em;\n}\n\n\n.body {\n  width: 80%;\n}\n\n.sidebar {\n  width: 15%;\n  /*padding-top: 4em;*/\n}\n\n.search {\n  display: flex;\n  flex-direction: column;\n}\n\nbutton {\n  position:relative;\n  /*margin: 1em;*/\n}\n", ""]);
 	
 	// exports
 
