@@ -23,17 +23,18 @@ header {
   align-items: stretch;
 }
 
-img {
-  width: 20%;
-  border-bottom: 2px solid gray;
-  border-top: 2px solid gray;
-}
 
 footer {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
   align-items: stretch;
+}
+
+img {
+  width: 20%;
+  border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
 }
 
 a {
@@ -44,7 +45,6 @@ a {
 .nav {
   display: flex;
   justify-content: space-around;
-  /*padding-bottom: 2em;*/
   font-size: 1em;
 }
 
@@ -59,18 +59,9 @@ a {
 .main {
   display: flex;
   flex: 1;
-  flex-direction: row;
   justify-content: space-around;
   padding: 1em;
 }
-
-
-.footer {
-  display: flex;
-  justify-content: center;
-  padding-bottom: 3em;
-}
-
 
 .body {
   width: 80%;
