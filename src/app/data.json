@@ -1,28 +1,49 @@
 [   {
     "entryID": 2,
-    "title": "Mr. Blue Hipster",
-    "posted": ["5", "November", "2016"],
+    "title": "Thoughts from week 5 of coding bootcamp",
+    "posted": ["November ", "2, ", "2016"],
     "content": [
-      "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke.", "Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher.", "Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."
+      "Early in week 4 I'd wanted to quit for at least the 10th time; things got better after that. I don't think it was because the material became easier or my brain suddenly understood everything - rather, I finally realized I am doing all I am capable of and there's little sense in beating myself up over incomplete or not-up-to-my-standards homework. There is literally nothing more I can do. I barely see my family, my TV time is limited to Sunday evening's Westworld, I haven't gone to a movie or out with friends in who knows how long, I'm not doing the cleaning or the laundry or the cooking or the grocery shopping - all I am doing is bootcamp stuff!",
+      "And while my brain isn't necessarily understanding things completely, it is beginning to grasp how all the pieces fit together and that's making me feel a little less like drowning and more like (mostly) keeping my head (halfway) out of the water. I am still struggling with the execution of JavaScript itself, but conceptually I'm having no difficulties comprehending things like this, objects, constructors, or prototypes. We're also dealing with Webpack this week and that's been fun and interesting. If given the chance, I will still spend 10 hours of an assignment on the logic itself and maybe a half hour on styling and I don't expect that to change anytime soon. JavaScript is just too interesting :)"
     ],
-    "tags": ["toast", "distillery"]
+    "tags": ["Musings", "Tech"]
     },
     {
     "entryID": 1,
-    "title": "Hipster Bring Me Down",
-    "posted": ["5", "September", "2016"],
+    "title": "Let's learn about objects and this",
+    "posted": ["October ", "28, ", "2016"],
     "content": [
-      "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant.", "Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery. Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok.", "Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."
+      "No really, let’s. Because I’ve learned this already, but I need all the reviewing I can get. This should take 6-8 hours.",
+      "First, watch these videos by one of my very favorite JS resources, Mattias P. Johansson. (And later on, find time to watch all his other videos – he’s highly entertaining, very human, and also super nice on social media.) No need to code along.",
+      "Then read chapters 1 and 2 of this book by another one of my favorites, Kyle Simpson. You may, like me, feel both dumber and smarter after reading Kyle’s material, but that’s okay – he knows his stuff and it’ll be worth it. I like to code along with the examples Kyle provides, but you don’t have to.",
+      "Now, code along with Mary while she makes a fun little game. She moves fast and you may have to stop the video every few minutes to catch up. After you’ve got all your code written and working, watch the video again while adding comments to your code about what every single thing is and what it’s doing. You’ll learn more in this second run-through than you could catch in the first, trust me.",
+      "There, now you’re an expert! Okay, not really – but you learned some stuff, right? BOOM."
     ],
-    "tags": ["vape", "PBR"]
+    "tags": ["How-to", "Tech"]
     },
     {
     "entryID": 0,
-    "title": "Evil Hipster",
-    "posted": ["5", "October", "2016"],
+    "title": "Thoughts from week 4 of coding bootcamp",
+    "posted": ["October ", "26, ", "2016"],
     "content": [
-      "Messenger bag hell of pok pok, chicharrones street art organic keytar snackwave tumblr hexagon mustache VHS hot chicken lo-fi. Normcore unicorn post-ironic succulents leggings migas, art party tote bag wolf affogato photo booth air plant. Beard next level actually, polaroid four dollar toast authentic typewriter normcore fashion axe fingerstache wayfarers 3 wolf moon godard mixtape squid photo booth woke. Lyft polaroid raw denim literally, viral synth pork belly jianbing before they sold out distillery.", "Put a bird on it semiotics etsy lyft, migas kale chips street art plaid. Kinfolk four dollar toast roof party, fam pug 3 wolf moon pour-over readymade shabby chic chartreuse PBR&B cred street art. Live-edge chartreuse actually street art iPhone banjo, poutine pok pok. Jianbing lo-fi meditation keytar flannel butcher. Butcher direct trade kinfolk vexillologist, four dollar toast before they sold out echo park whatever you probably haven't heard of them tattooed pabst artisan church-key PBR&B. Blue bottle shoreditch hoodie readymade ramps flexitarian, ennui truffaut dreamcatcher fixie."
+      "Oof. Week 4 of bootcamp was tough. Tuesday morning found me feeling very down on the way to school. I wanted to quit. The day before, we’d been given an assignment using APIs, and I couldn’t get one small part of mine figured out. The issue wasn’t even getting the Ajax call to work – it was getting down into the right level of each object as I pushed them to the DOM in a table. This is the story of my JavaScripting life: knowing conceptually what I need to do and knowing how to do it, but missing one tiny piece of the puzzle. Terribly frustrating! But by Tuesday afternoon I’d solved my problem and was feeling good about the world. This lasted until Saturday, when I went to my third meetup of the week, and it all came crashing down again.",
+      "I’d wanted to quit in week 3, too. Actually, if I don’t want to quit at least 3 times in a week, I consider it a good week. Before bootcamp started, I had naive worries about the schedule, my class, the location. I never suspected the real battle would be convincing myself to keep going back. Every. Single. Day. Don’t get me wrong – I absolutely adore my classmates, our instructor, the campus director…everything about The Iron Yard, really – but it is hard to get a third of the way into this and still feel like I know basically nothing. Every day I feel like I am repeatedly throwing myself against a brick wall, with naught to show for it but a mutilated sense of self-worth.",
+      "(Pretty dramatic, right? I know.)",
+      "I’m trying to trust that this isn’t reality. That my brain is absorbing the things it needs to, and it’s all going to come together eventually. I asked a local Iron Yard alumni if she ever stopped feeling like she didn’t know anything, and she said it was in week 11 of 12. 7 weeks away. If you find yourself experiencing this during coding bootcamp, you’ll want to know how to hang on until then. Here’s what’s working for me so far.",
+
+      "If you have a fallback option, it may be super easy to quit. So don’t give yourself a fallback option. For me, I told everyone around me I was D-O-N-E with accounting, and that learning to code was the only other thing that sounded interesting. So if I quit now, it’s back to the drawing board – which I’m really not interested in doing, and can’t afford to do anyway. No choice but to keep going!",
+
+      "Trust your instructor. So many times I’ve felt behind and didn’t want to do the morning exercises from our instructor; I’d want to read up on things to fill in the holes in my learning. But two days later, I would find myself relying on what I had learned during the morning exercises. Even when it’s frustrating, go with it!",
+
+      "Look back over your notes from previous weeks of class. Do you need those notes anymore? No, because you know that stuff by heart now. Tell yourself that in the future you won’t need the notes you’re relying on today. You will make progress!",
+
+      "Immerse yourself! You might as well, right? Read a JS book on the train, listen to a JS podcast on the walk, read JS blog posts in the morning with your coffee. Right before I go to bed, I like to give my brain one last concept to play with while I’m sleeping. The JS dreams are getting exhausting, it’s true – but if it helps me learn, I’m willing to deal with it.",
+
+      "Go to meetups for rejuvenation and inspiration!! I’ve mentioned that I’m terrified of meetups, but I go anyway – because no matter how bad my day has been, I always come away feeling amazing. Even the meetup on Saturday, which I felt woefully unprepared for and almost walked out of halfway through, reminded me that hey, I may not know anything yet, but JavaScript is still completely fascinating to me and I am on the right path.",
+
+      "It is so much info. Your brain is processing it whether you realize it or not. Hang in there. You can do it!"
+
       ],
-    "tags": ["meditation", "artisan"]
+    "tags": ["Musings", "Tech"]
     }
 ]

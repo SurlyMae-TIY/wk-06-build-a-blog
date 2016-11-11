@@ -23,22 +23,23 @@ export default class Sidebar extends React.Component {
   render () {
     return(
       <div className="search">
-        <h4>Search by month</h4>
+        <br />
         {this.props.monthList.map((month, idx) => {
           return  <div key={idx}>
-                    <button
-                      id={month}
+                    <ul>
+                    <a id={month}
                       name="month"
-                      onClick={this.onClickSelect.bind(this)}>{month}</button>
+                      onClick={this.onClickSelect.bind(this)}>{month}</a>
+                    </ul>
                   </div>
         })}
-        <h4>Search by tag</h4>
+        <br />
         {this.props.tagList.map((tag, idx) => {
           return  <div key={idx}>
-                    <button
+                    <a
                       id={tag}
                       name="tag"
-                      onClick={this.onClickSelect.bind(this)}>{tag}</button><br/>
+                      onClick={this.onClickSelect.bind(this)}>{tag}</a>
                   </div>
         })}
       </div>

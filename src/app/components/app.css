@@ -20,7 +20,7 @@ header {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
 }
 
 img {
@@ -32,7 +32,7 @@ footer {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
 }
 
 a {
@@ -87,5 +87,6 @@ a {
 
 button {
   position:relative;
-  /*margin: 1em;*/
+  background-color: white;
+  font-family: 'Prociono', serif;
 }

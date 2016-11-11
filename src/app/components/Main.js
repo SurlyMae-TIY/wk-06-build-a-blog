@@ -7,7 +7,7 @@ import Sidebar from './Main/Sidebar';
 import blogData from '../data.json';
 
 const monthList = blogData.map(function(entry, idx) {
-  return entry.posted[1];
+  return entry.posted[0];
 })
 .reduce(function(p, c)
 {
