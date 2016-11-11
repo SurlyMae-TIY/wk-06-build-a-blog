@@ -1,4 +1,4 @@
-// var debug = process.env.NODE_ENV !== "production";
+var debug = process.env.NODE_ENV !== "production";
 var path = require("path");
 var webpack = require('webpack');
 
@@ -27,11 +27,31 @@ var config = {
         loader: "style!css"
       },
       {
+        test: /\.(jpe?g|png|gif|svg)(\?v=\d+\.\d+\.\d+)?$/i,
+        loader: 'file-loader?name=[path][name].[ext]?[hash:10]',
+         exclude: /(node_modules|bower_components)/
+      },
+      {
         test: /\.json$/,
         loader: "json-loader"
       }
     ]
-  }
+  },
+  plugins: debug ? [
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({'React': 'react'})
+  ] : [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({}),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.ProvidePlugin({'React': 'react'})
+  ]
 };
 
 module.exports = config;

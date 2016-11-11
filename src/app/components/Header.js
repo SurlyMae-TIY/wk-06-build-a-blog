@@ -8,13 +8,18 @@ export default class Header extends React.Component {
     return(
       <header className="header">
         <div className="banner">
-          <img src="src/app/images/Main.JPG" alt="Image of Main Street in Salt Lake City"/>
+          <img src="./app/images/GallivanR.jpg" alt=""/>
+          <img src="./app/images/MoabR.jpg" alt=""/>
+          <img src="./app/images/JazzArenaR.jpg" alt=""/>
+          <img src="./app/images/SourdoughR.jpg" alt=""/>
+          <img src="./app/images/WalkerCenterR.jpg" alt=""/>
         </div>
         <div className="nav">
           <ul>
-            <li><a href="#">CV</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><Link to='/'>Home</Link></li>
+            <li><Link to='/resume'>CV</Link></li>
+            <li><Link to='/portfolio'>Portfolio</Link></li>
+            <li><Link to='/contact'>Contact</Link></li>
           </ul>
         </div>
       </header>
