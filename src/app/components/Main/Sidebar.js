@@ -27,7 +27,7 @@ export default class Sidebar extends React.Component {
         {this.props.monthList.map((month, idx) => {
           return  <div key={idx}>
                     <ul>
-                    <a id={month}
+                    <a href ='#' id={month}
                       name="month"
                       onClick={this.onClickSelect.bind(this)}>{month}</a>
                     </ul>
@@ -36,7 +36,7 @@ export default class Sidebar extends React.Component {
         <br />
         {this.props.tagList.map((tag, idx) => {
           return  <div key={idx}>
-                    <a
+                    <a href='#'
                       id={tag}
                       name="tag"
                       onClick={this.onClickSelect.bind(this)}>{tag}</a>

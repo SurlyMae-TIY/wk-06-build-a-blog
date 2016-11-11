@@ -26,6 +26,7 @@ header {
 img {
   width: 20%;
   border-bottom: 2px solid gray;
+  border-top: 2px solid gray;
 }
 
 footer {
@@ -43,7 +44,7 @@ a {
 .nav {
   display: flex;
   justify-content: space-around;
-  padding-bottom: 2em;
+  /*padding-bottom: 2em;*/
   font-size: 1em;
 }
 
@@ -60,7 +61,7 @@ a {
   flex: 1;
   flex-direction: row;
   justify-content: space-around;
-  padding: 2em;
+  padding: 1em;
 }
 
 
@@ -73,20 +74,14 @@ a {
 
 .body {
   width: 80%;
+  padding-left: 2em;
 }
 
 .sidebar {
   width: 15%;
-  /*padding-top: 4em;*/
 }
 
 .search {
   display: flex;
   flex-direction: column;
-}
-
-button {
-  position:relative;
-  background-color: white;
-  font-family: 'Prociono', serif;
 }
