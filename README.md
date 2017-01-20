@@ -1,1 +1,1 @@
-# wk-06-build-a-blog
+# Personal blog built using React.
